@@ -5,9 +5,10 @@ $(function(){
   var messages_template = Handlebars.compile($('#messages-template').html());
 
   var peer = new Peer({
-    host: 'localhost',
-    port: 9000,
-    path: '/peerjs',
+    host: 'peerjs-server-testing.herokuapp.com',
+    secure: true,
+    port: 443,
+    key: 'peerjs',
     debug: 3,
     config: {'iceServers': [
     { url: 'stun:stun1.l.google.com:19302' },
